@@ -1,0 +1,33 @@
+.hr {
+  margin: 35px 0 10px;
+  height: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  color: @text-light;
+  border-bottom: 1px solid #bbb;
+  .inner {
+    display: inline-block;
+    position: relative;
+    top: -12px;
+    padding: 0 5px;
+    background: #fff;
+    font-size: 14px;
+  }
+  &.hr-lg {
+    margin-bottom: 35px;
+  }
+  &.hr-md {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  &.hr-sm {
+    margin: 10px 0;
+  }
+  &.hr-xs {
+    margin: 5px 0;
+  }
+  &.hr-blank {
+    border-bottom: none;
+  }
+}
