@@ -1,0 +1,21 @@
+{
+  "name": "css-components",
+  "description": "A collection of useful stand alone css components",
+  "main": "index.html",
+  "authors": [
+    "https://github.com/tim545"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/tim545/css-components",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.2.0"
+  }
+}

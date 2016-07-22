@@ -1,0 +1,27 @@
+{
+  "name": "css-components",
+  "version": "1.0.0",
+  "description": "A collection of useful stand alone css components",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tim545/css-components.git"
+  },
+  "author": "https://github.com/tim545",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tim545/css-components/issues"
+  },
+  "homepage": "https://github.com/tim545/css-components#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jade": "^1.0.0",
+    "grunt-contrib-less": "^1.3.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "load-grunt-tasks": "^3.5.0"
+  }
+}
