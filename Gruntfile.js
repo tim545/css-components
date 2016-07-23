@@ -5,6 +5,10 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
 
+    clean: {
+      files: ['dist/*.*']
+    },
+
     concat: {
       css: {
         files: [{
@@ -16,10 +20,16 @@ module.exports = function(grunt) {
 
     less: {
       compile: {
-        files: [{
-          src: ['src/components/**/*.less'],
-          dest: 'dist/example-less.css'
-        }]
+        files: [
+          {
+            src: ['src/components/**/*.less'],
+            dest: 'dist/components-less.css'
+          },
+          {
+            src: ['src/index.less'],
+            dest: 'dist/example.css'
+          }
+        ]
       }
     },
 
@@ -27,7 +37,7 @@ module.exports = function(grunt) {
       compile: {
         files: [{
           src: ['src/components/**/*.scss'],
-          dest: 'dist/example-scss.css'
+          dest: 'dist/components-scss.css'
         }]
       }
     },
@@ -39,10 +49,20 @@ module.exports = function(grunt) {
           dest: 'dist/index.html'
         }]
       }
+    },
+
+    watch: {
+      files: [
+        'src/**/*.jade',
+        'src/**/*.less',
+        'src/**/*.scss'
+      ],
+      tasks: ['compile']
     }
 
   });
 
-  grunt.registerTask('default', ['concat', 'less', 'sass', 'jade']);
+  grunt.registerTask('compile', ['clean', 'concat', 'less', 'sass', 'jade']);
+  grunt.registerTask('default', ['compile', 'watch']);
 
 };

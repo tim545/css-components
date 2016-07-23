@@ -1,19 +1,11 @@
 .hr {
-  margin: 35px 0 10px;
+  margin: 35px 0 15px;
   height: 0;
   text-align: center;
   font-size: 16px;
   font-weight: normal;
   color: #999;
   border-bottom: 1px solid #bbb;
-  .label {
-    display: inline-block;
-    position: relative;
-    top: -12px;
-    padding: 0 5px;
-    background: #fff;
-    font-size: 14px;
-  }
   &.hr-xl {
     margin-bottom: 50px;
   }
@@ -25,12 +17,30 @@
     margin-top: 20px;
   }
   &.hr-sm {
-    margin: 10px 0;
+    margin: 15px 0;
+    .hr-label {
+      font-size: 12px;
+      top: -6px;
+    }
   }
   &.hr-xs {
     margin: 5px 0;
+    .hr-label {
+      font-size: 10px;
+      top: -5px;
+    }
   }
   &.hr-blank {
     border-bottom: none;
   }
+}
+
+.hr-label {
+  position: relative;
+  top: -8px;
+  display: inline-block;
+  padding: 0 5px;
+  background: #fff;
+  font-size: 14px;
+  line-height: 1em;
 }
