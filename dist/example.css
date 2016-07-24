@@ -17,17 +17,23 @@ body {
   border: 1px solid #999;
 }
 .section:hover {
-  border: 1px solid #333;
+  box-shadow: 0 0 3px #ccc;
 }
 .btn {
   padding: 10px 25px;
   font-size: 1em;
   background: #5ba4cf;
+  color: #153649;
   border: 1px solid #388dbf;
   border-radius: 5px;
 }
+.btn:hover {
+  cursor: pointer;
+  color: #215370;
+  background: #82badb;
+}
 .btn-lg {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 .btn-block {
   display: block;
@@ -35,4 +41,20 @@ body {
 }
 .text-center {
   text-align: center;
+}
+.panel {
+  display: block;
+  margin-bottom: 25px;
+}
+.panel-header {
+  padding: 15px;
+  background: #ddd;
+}
+.panel-body {
+  padding: 15px;
+  background: #f8f8f8;
+}
+.panel-footer {
+  padding: 15px;
+  background: #ddd;
 }

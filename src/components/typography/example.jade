@@ -1,25 +1,47 @@
 section.section
   h1 Typography
+  .hr
   p A set of atomic-style class names that can be used to control typography, can be used alongside any other default styles already present.
 
-  p.tx-dark dark
-  p.tx-darker darker
-  p.tx-light light
-  p.tx-lighter lighter
-  p.tx-inverse inverse
+  .panel
+    .panel-header: span.tx-ln-sm.tx-dark.tx-lg Colour adjustments
+    .panel-body
+      p.tx-dark dark
+      p.tx-darker darker
+      p.tx-light light
+      p.tx-lighter lighter
+      p: span(style="background: #000;"): span.tx-inverse inverse
 
-  p.tx-weight-light light weight
-  p.tx-weight-bold bold weight
-  p.tx-weight-default default weight
+  .panel
+    .panel-header: span.tx-ln-sm.tx-dark.tx-lg Font Weight
+    .panel-body
+      p.tx-weight-light light weight
+      p.tx-weight-bold bold weight
+      p.tx-weight-default default weight
 
-  p.tx-xs extra small
-  p.tx-sm small
-  p.tx-lg large
-  p.tx-xl extra large
-  p.tx-default default
+  .panel
+    .panel-header: span.tx-ln-sm.tx-dark.tx-lg Sizes
+    .panel-body
+      p.tx-xs extra small
+      p.tx-sm small
+      p.tx-lg large
+      p.tx-xl extra large
+      p.tx-default default
 
-  p.tx-italic italic
+  .panel
+    .panel-header: span.tx-ln-sm.tx-dark.tx-lg Transformations
+    .panel-body
+      p.tx-italic italic
 
-  p.tx-ln-sm small line height
-  p.tx-ln-lg large line height
-  p.tx-ln-default default line height
+  .panel
+    .panel-header: span.tx-ln-sm.tx-dark.tx-lg Line heights
+    .panel-body
+      .tx-weight-bold Small
+      .hr.hr-xs
+      p.tx-ln-sm Peter Piper picked a peck of pickled peppers. A peck of pickled peppers Peter Piper picked. If Peter Piper picked a peck of pickled peppers, Where's the peck of pickled peppers Peter Piper picked?
+      .tx-weight-bold Large
+      .hr.hr-xs
+      p.tx-ln-lg Peter Piper picked a peck of pickled peppers. A peck of pickled peppers Peter Piper picked. If Peter Piper picked a peck of pickled peppers, Where's the peck of pickled peppers Peter Piper picked?
+      .tx-weight-bold Default
+      .hr.hr-xs
+      p.tx-ln-default Peter Piper picked a peck of pickled peppers. A peck of pickled peppers Peter Piper picked. If Peter Piper picked a peck of pickled peppers, Where's the peck of pickled peppers Peter Piper picked?

@@ -1,3 +1,6 @@
+@btnColour: #5ba4cf;
+
+
 body {
   font-size: 1em;
   line-height: 1.4em;
@@ -16,20 +19,26 @@ body {
   border-radius: 5px;
   border: 1px solid #999;
   &:hover {
-    border: 1px solid #333;
+    box-shadow: 0 0 3px #ccc;
   }
 }
 
 .btn {
   padding: 10px 25px;
   font-size: 1em;
-  background: #5ba4cf;
-  border: 1px solid darken(#5ba4cf, 10%);
+  background: @btnColour;
+  color: darken(@btnColour, 40%);
+  border: 1px solid darken(@btnColour, 10%);
   border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+    color: darken(@btnColour, 30%);
+    background: lighten(@btnColour, 10%);
+  }
 }
 
 .btn-lg {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .btn-block {
@@ -39,4 +48,24 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.panel {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.panel-header {
+  padding: 15px;
+  background: #ddd;
+}
+
+.panel-body {
+  padding: 15px;
+  background: #f8f8f8;
+}
+
+.panel-footer {
+  padding: 15px;
+  background: #ddd;
 }

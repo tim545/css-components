@@ -205,43 +205,43 @@
 }
 
 .tx-dark {
-  color: '#666';
+  color: #333;
 }
 .tx-darker {
-  color: '#333';
+  color: #000;
 }
 .tx-light {
-  color: '#999';
+  color: #666;
 }
 .tx-lighter {
-  color: '#e5e5e5';
+  color: #ddd;
 }
 .tx-inverse {
-  color: '#fff';
+  color: #fff;
 }
 .tx-weight-light {
-  font-family: 'LatoBold', 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
+  font-weight: 100;
 }
 .tx-weight-default {
-  font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
+  font-weight: 400;
 }
 .tx-weight-bold {
-  font-family: 'LatoLight', 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
+  font-weight: 600;
 }
 .tx-default {
-  font-size: 14px;
-}
-.tx-sm {
-  font-size: 12px;
-}
-.tx-xs {
-  font-size: 10px;
-}
-.tx-lg {
   font-size: 16px;
 }
-.tx-xl {
+.tx-sm {
+  font-size: 14px;
+}
+.tx-xs {
+  font-size: 12px;
+}
+.tx-lg {
   font-size: 18px;
+}
+.tx-xl {
+  font-size: 20px;
 }
 .tx-italic {
   font-style: italic;
@@ -249,11 +249,11 @@
 .tx-ln-default {
   line-height: 1.4em;
 }
-.tx-ln-lg {
-  line-height: 1.6em;
-}
 .tx-ln-sm {
-  line-height: 1.2em;
+  line-height: 1.1em;
+}
+.tx-ln-lg {
+  line-height: 1.8em;
 }
 .tx-btn {
   margin-bottom: 0;
