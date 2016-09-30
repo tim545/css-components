@@ -1,0 +1,81 @@
+
+$gridColumns: 12;
+
+@mixin col($class, $index, $list) {
+  @if $index == $gridColumns  {
+    #{$list} {
+      float: left;
+    }
+  }
+
+  @if $index < $gridColumns {
+    $index: $index + 1;
+    $item: ".col-#{$class}-#{$index}";
+    @include col($class, $index, "#{$list}, #{$item}");
+  }
+}
+
+@mixin float-grid-columns($class) {
+  @include col($class, 1, ".col-#{$class}-1"); // kickstart it
+}
+
+@mixin calc-grid-column($index, $class, $type) {
+  @if $index > 0 and $type == width {
+    .col-#{$class}-#{$index} {
+      width: $index / $gridColumns * 100 + '%';
+    }
+  }
+
+  @if $index > 0 and $type == push {
+    .col-#{$class}-push-#{$index} {
+      left: $index / $gridColumns * 100 + '%';
+    }
+  }
+
+  @if $index == 0 and $type == push {
+    .col-#{$class}-push-0 {
+      left: auto;
+    }
+  }
+
+  @if $index > 0 and $type == pull {
+    .col-#{$class}-pull-#{$index} {
+      right: $index / $gridColumns * 100 + '%';
+    }
+  }
+
+  @if $index == 0 and $type == pull {
+    .col-#{$class}-pull-0 {
+      right: auto;
+    }
+  }
+
+  @if $type == offset {
+    .col-#{$class}-offset-#{$index} {
+      margin-left: $index / $gridColumns * 100 + '%';
+    }
+  }
+}
+
+// Basic looping in LESS
+@mixin loop-grid-columns($index, $class, $type) {
+  @include calc-grid-column($index, $class, $type);
+  // next iteration
+  @if $index > 1 {
+    $index: $index - 1;
+    @include loop-grid-columns($index, $class, $type);
+  }
+}
+
+// Create grid for specific class
+@mixin make-grid($class) {
+  @include float-grid-columns($class);
+  @include loop-grid-columns($gridColumns, $class, width);
+  @include loop-grid-columns($gridColumns, $class, pull);
+  @include loop-grid-columns($gridColumns, $class, push);
+  @include loop-grid-columns($gridColumns, $class, offset);
+}
+
+@media (min-width: 1400px) {
+  @include make-grid(xl);
+}
