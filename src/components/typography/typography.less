@@ -2,11 +2,22 @@
 @fontFamily: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
 @fontFamilyLight: 'LatoLight', 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
 @fontFamilyBold: 'LatoBold', 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
+
 @txtLighter: #ddd;
 @txtLight: #666;
 @txtDark: #333;
 @txtDarker: #000;
 @txtInverse: #fff;
+
+@txtWeightLight: 100;
+@txtWeightDefault: 400;
+@txtWeightBold: 500;
+
+@txtLineHeightXs: 1em;
+@txtLineHeightSm: 1.2em;
+@txtLineHeight: 1.4em;
+@txtLineHeightLg: 1.6em;
+@txtLineHeightXl: 1.8em;
 
 // Colours
 .tx-dark {color: @txtDark;}
@@ -16,29 +27,25 @@
 .tx-inverse {color: @txtInverse;}
 
 // Weights
-.tx-weight-light {
-  font-weight: 100;
-}
-.tx-weight-default {
-  font-weight: 400;
-}
-.tx-weight-bold {
-  font-weight: 600;
-}
+.tx-weight-light {font-weight: @txtWeightLight;}
+.tx-weight-default {font-weight: @txtWeightDefault;}
+.tx-weight-bold {font-weight: @txtWeightBold;}
 
 // Sizes
-.tx-default {font-size: @fontSize;}
-.tx-sm {font-size: @fontSize - 2;}
 .tx-xs {font-size: @fontSize - 4;}
+.tx-sm {font-size: @fontSize - 2;}
+.tx-default {font-size: @fontSize;}
 .tx-lg {font-size: @fontSize + 2;}
 .tx-xl {font-size: @fontSize + 4;}
 
 // Adjustments
 .tx-italic {font-style: italic;}
 
-.tx-ln-default {line-height: 1.4em;}
-.tx-ln-sm {line-height: 1.1em;}
-.tx-ln-lg {line-height: 1.8em;}
+.tx-ln-xs {line-height: @txtLineHeight - .4;}
+.tx-ln-sm {line-height: @txtLineHeight - .2;}
+.tx-ln-default {line-height: @txtLineHeight;}
+.tx-ln-lg {line-height: @txtLineHeight + .2;}
+.tx-ln-xl {line-height: @txtLineHeight + .4;}
 
 // Button-sized text block (alternative to btn-link)
 .tx-btn {
