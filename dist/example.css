@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
   font-size: 1em;
   line-height: 1.4em;
+  font-family: 'Roboto', sans-serif;
+  color: #656565;
+}
+h1,
+h2,
+h3 {
+  color: #454545;
 }
 .content {
   margin: 20px auto;
@@ -13,6 +21,12 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
+  .content {
+    width: 60%;
+    margin: 20px auto;
+  }
+}
+@media screen and (min-width: 1400px) {
   .content {
     width: 50%;
     margin: 20px auto;
