@@ -3,11 +3,19 @@ body {
   line-height: 1.4em;
 }
 .content {
-  margin: 20px;
+  margin: 20px auto;
+  width: 90%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .content {
-    margin: 100px;
+    width: 80%;
+    margin: 20px auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    width: 50%;
+    margin: 20px auto;
   }
 }
 .section {

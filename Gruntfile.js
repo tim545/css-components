@@ -51,6 +51,16 @@ module.exports = function(grunt) {
       }
     },
 
+    'http-server': {
+      'examples': {
+        root: './dist',
+        host: 'localhost',
+        port: 9000,
+        runInBackground: true,
+        openBrowser: true
+      }
+    },
+
     watch: {
       files: [
         'src/**/*.jade',
@@ -63,6 +73,6 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('compile', ['clean', 'concat', 'less', 'sass', 'jade']);
-  grunt.registerTask('default', ['compile', 'watch']);
+  grunt.registerTask('default', ['compile', 'http-server', 'watch']);
 
 };

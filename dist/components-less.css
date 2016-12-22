@@ -226,16 +226,16 @@
   font-weight: 400;
 }
 .tx-weight-bold {
-  font-weight: 600;
+  font-weight: 500;
 }
-.tx-default {
-  font-size: 16px;
+.tx-xs {
+  font-size: 12px;
 }
 .tx-sm {
   font-size: 14px;
 }
-.tx-xs {
-  font-size: 12px;
+.tx-default {
+  font-size: 16px;
 }
 .tx-lg {
   font-size: 18px;
@@ -246,13 +246,19 @@
 .tx-italic {
   font-style: italic;
 }
+.tx-ln-xs {
+  line-height: 1em;
+}
+.tx-ln-sm {
+  line-height: 1.2em;
+}
 .tx-ln-default {
   line-height: 1.4em;
 }
-.tx-ln-sm {
-  line-height: 1.1em;
-}
 .tx-ln-lg {
+  line-height: 1.6em;
+}
+.tx-ln-xl {
   line-height: 1.8em;
 }
 .tx-btn {
