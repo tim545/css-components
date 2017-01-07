@@ -44,6 +44,27 @@
   line-height: 1em;
 }
 
+.read-more {
+  display: inline-block;
+  position: relative;
+  background-color: #ececec;
+  height: 0.8em;
+  padding: 2px 15px;
+  margin: 0 3px;
+  vertical-align: middle;
+}
+.read-more::before {
+  content: '...';
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: -1px;
+  text-align: center;
+  line-height: 0.8em;
+}
 
 @media (min-width: 1400px) {
   .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
